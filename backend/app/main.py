@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+import random
 
 app = FastAPI()
 app.add_middleware(
@@ -12,4 +13,4 @@ app.add_middleware(
 
 @app.get("/hello")
 def hello():
-    return {"message": "hello world"}
+    return {"message": f"hello world{random.randint(1, 10)}"}
