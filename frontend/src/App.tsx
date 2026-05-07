@@ -11,7 +11,7 @@ export default function App() {
         setLoading(true);
         setError(null);
 
-        const res = await fetch("https://mathapplication.onrender.com/hello");
+        const res = await fetch("https://mathapplication.onrender.com/hello?num=2");
 
         if (!res.ok) {
           throw new Error(`HTTP error: ${res.status}`);

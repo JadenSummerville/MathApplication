@@ -12,5 +12,5 @@ app.add_middleware(
 )
 
 @app.get("/hello")
-def hello():
-    return {"message": f"hello world{random.randint(1, 10)}"}
+def hello(num: int = 1):
+    return {"message": f"hello world{random.randint(1, 10)**num}"}
