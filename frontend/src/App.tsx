@@ -36,6 +36,9 @@ export default function App() {
       {loading && <p>Loading...</p>}
       {error && <p style={{ color: "red" }}>{error}</p>}
       {!loading && !error && <p>{message}</p>}
+      <div style="position: fixed; bottom: 10px; font-size: 12px; color: gray;">
+                created by Jaden Summerville
+            </div>
     </div>
   );
 }
